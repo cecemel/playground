@@ -97,4 +97,5 @@ if __name__ == "__main__":
 
     frame = fill_frame(mod_ims)
     frame = post_decorate_frame(frame)
-    frame.save(os.path.join(PROC_FOLDER, "etude_de_la_bataille_contre_une_decadance_imminente.JPG"), "JPEG")
+    frame.save(os.path.join(PROC_FOLDER, "etude_de_la_bataille_contre_une_decadance_imminente.JPG"),
+               format='JPEG', subsampling=0, quality=100)
