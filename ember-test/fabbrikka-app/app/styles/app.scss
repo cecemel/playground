@@ -31,7 +31,7 @@ float: right!important;
 
 .thumbnail {
     border: 0 none;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2), 0 18px 60px 0 rgba(0,0,0,0.19);
     padding: 0px;
     overflow: hidden;
 }
@@ -93,7 +93,12 @@ box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2), 0 18px 60px 0 rgba(0,0,0,0.19);
 }
 
 .flat-button:hover{
-  background-color: fcfcfc
+  background-color: #fcfcfc;
+      -webkit-transition: all .8s ease; /* Safari and Chrome */
+    -moz-transition: all .8s ease; /* Firefox */
+    -o-transition: all .8s ease; /* IE 9 */
+    -ms-transition: all .8s ease; /* Opera */
+    transition: all .8s ease;
   }
 
 .carousel-caption {
