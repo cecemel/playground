@@ -1,0 +1,82 @@
+@import "bootstrap";
+
+// remove rounded border
+* {
+  border-radius: 0 !important;
+}
+
+//navbar stuff -> see navbar.hbs
+.navbar-collapse.collapse {
+display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+float: left !important;
+}
+
+
+.navbar-nav.navbar-right:last-child {
+margin-right: -15px !important;
+}
+
+.navbar-right {
+float: right!important;
+}
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+    border-bottom-color: #e7e7e7;
+}
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+    padding: 0px;
+}
+
+.carousel-caption {
+    left: 5%;
+    right: 20%;
+    padding-bottom: 30px;
+    text-align: left;
+    top: 0%;
+}
+
+.products-overview{
+	margin-top: 30px
+}
+
+.img-hover img{
+    -webkit-transition: all .8s ease; /* Safari and Chrome */
+  	-moz-transition: all .8s ease; /* Firefox */
+  	-o-transition: all .8s ease; /* IE 9 */
+  	-ms-transition: all .8s ease; /* Opera */
+  	transition: all .8s ease;
+}
+.img-hover img:hover{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform:translateZ(0) scale(1.02); /* Safari and Chrome */
+    -moz-transform:scale(1.02); /* Firefox */
+    -ms-transform:scale(1.02); /* IE 9 */
+    -o-transform:translatZ(0) scale(1.02); /* Opera */
+    transform:translatZ(0) scale(1.02);
+}
+
+
+@media(max-width:767px){
+	 .carousel-caption{
+	 	display: none
+	 }
+
+	 .thumbnail{
+	 	margin-left: 10%;
+	 	margin-right: 10%;
+	 }
+
+	 .thumbnail img{
+	 	margin: 0px
+	 }
+
+}
