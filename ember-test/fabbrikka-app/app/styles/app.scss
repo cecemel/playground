@@ -53,7 +53,7 @@ float: right!important;
 }
 
 .thumbnail-hover:hover{
-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 6px 5px 7px 2px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4), 6px 5px 7px 2px rgba(0, 0, 0, 0.28), 0px 2px 1px -1px rgba(0, 0, 0, 0.24);
 }
 
 .flat-button{
@@ -116,28 +116,33 @@ box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 6px 5px 7px 2px rgba(0, 0, 0, 0.
 .products-overview{
 	margin-top: 30px
 }
-
-.img-hover img{
-    -webkit-transition: all .8s ease; /* Safari and Chrome */
-  	-moz-transition: all .8s ease; /* Firefox */
-  	-o-transition: all .8s ease; /* IE 9 */
-  	-ms-transition: all .8s ease; /* Opera */
-  	transition: all .8s ease;
-}
-.img-hover img:hover{
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform:translateZ(0) scale(1.02); /* Safari and Chrome */
-    -moz-transform:scale(1.02); /* Firefox */
-    -ms-transform:scale(1.02); /* IE 9 */
-    -o-transform:translatZ(0) scale(1.02); /* Opera */
-    transform:translatZ(0) scale(1.02);
-}
-
 .caption p{
     width: 10%;
     float: left;
 }
+
+/* ripples */
+
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+.rippleEffect {
+    animation: rippleDrop .6s linear;
+}
+
+@keyframes rippleDrop {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 
 @media(max-width:767px){
 	 .carousel-caption{

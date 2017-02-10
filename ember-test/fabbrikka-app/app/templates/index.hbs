@@ -1,0 +1,9 @@
+<div class="products-overview">
+	<div class="row">
+	  {{#each model as |garment|}}
+	    <div class="col-xs-12 col-sm-4 col-md-4">
+	      {{#garment-card item=garment}} {{/garment-card}}
+	    </div>
+	  {{/each}}
+	</div>
+</div>
