@@ -1,0 +1,111 @@
+  {{#paper-toolbar}}
+    {{#paper-toolbar-tools}}
+      {{#paper-button iconButton=true}}
+        <a class="navbar-brand" href="#">
+          <img src="https://firebasestorage.googleapis.com/v0/b/fabbrikka-app.appspot.com/o/moose.png?alt=media&token=e0ec40aa-38fb-4c2b-8a38-9cf33d0afbff"/>
+         </a>
+      {{/paper-button}}
+      <h1>
+        fabbrikka
+      </h1>
+      <span class="flex"></span>
+      {{#paper-button iconButton=true}}
+        <a href="#">
+          <img src="https://firebasestorage.googleapis.com/v0/b/fabbrikka-app.appspot.com/o/cart.png?alt=media&token=fea4bdd8-81ff-4b91-9ff4-d67568ce8800"/>
+        </a>
+      {{/paper-button}}
+    {{/paper-toolbar-tools}}
+  {{/paper-toolbar}}
+
+
+ <div class="layout-row layout-xs-column">
+       {{#paper-card class="md-default-theme md-icon-button ember-view md-ink-ripple" as |card|}}
+              {{card.image src="https://firebasestorage.googleapis.com/v0/b/fabbrikka-app.appspot.com/o/sweater-1.jpg?alt=media&token=f9bc1500-a27c-41f8-97ea-07c94720853e" alt="Tomster" title="Tomster"}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}gay skirt{{/text.headline}}
+            {{#text.subhead}}69${{/text.subhead}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.actions}}
+          {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+        {{/card.actions}}
+      {{/paper-card}}
+
+
+
+       {{#paper-card as |card|}}
+              {{card.image src="https://firebasestorage.googleapis.com/v0/b/fabbrikka-app.appspot.com/o/sweater-6.jpg?alt=media&token=6601d2cd-9665-4c4d-8306-f34abe7bab12" alt="Tomster" title="Tomster"}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}sesam boem boem{{/text.headline}}
+            {{#text.subhead}}69${{/text.subhead}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.actions}}
+          {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+        {{/card.actions}}
+      {{/paper-card}}
+
+
+       {{#paper-card as |card|}}
+              {{card.image src="https://firebasestorage.googleapis.com/v0/b/fabbrikka-app.appspot.com/o/sweater-5.jpg?alt=media&token=dcebbc05-402b-4080-b6d7-8f631fe3d99e" alt="Tomster" title="Tomster"}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}sesam abierte{{/text.headline}}
+            {{#text.subhead}}69${{/text.subhead}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.actions}}
+          {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+        {{/card.actions}}
+      {{/paper-card}}
+  </div>
+
+  <div class="layout-row layout-xs-column">
+         {{#paper-card as |card|}}
+              {{card.image src="https://firebasestorage.googleapis.com/v0/b/fabbrikka-app.appspot.com/o/sweater-4.jpg?alt=media&token=ebc0dcad-76e0-4e26-acbe-a67f2b8122dc" alt="Tomster" title="Tomster"}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}tchak chak{{/text.headline}}
+            {{#text.subhead}}69${{/text.subhead}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.actions}}
+          {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+        {{/card.actions}}
+      {{/paper-card}}
+
+             {{#paper-card as |card|}}
+              {{card.image src="https://firebasestorage.googleapis.com/v0/b/fabbrikka-app.appspot.com/o/sweater-5.jpg?alt=media&token=dcebbc05-402b-4080-b6d7-8f631fe3d99e" alt="Tomster" title="Tomster"}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}something else{{/text.headline}}
+            {{#text.subhead}}69${{/text.subhead}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.actions}}
+          {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+        {{/card.actions}}
+      {{/paper-card}}
+             {{#paper-card as |card|}}
+              {{card.image src="https://firebasestorage.googleapis.com/v0/b/fabbrikka-app.appspot.com/o/sweater-1.jpg?alt=media&token=f9bc1500-a27c-41f8-97ea-07c94720853e" alt="Tomster" title="Tomster"}}
+        {{#card.title as |title|}}
+          {{#title.text as |text|}}
+            {{#text.headline}}foo bar{{/text.headline}}
+            {{#text.subhead}}69${{/text.subhead}}
+          {{/title.text}}
+        {{/card.title}}
+        {{#card.actions}}
+          {{#paper-button iconButton=true}}{{paper-icon "favorite"}}{{/paper-button}}
+          {{#paper-button iconButton=true}}{{paper-icon "share"}}{{/paper-button}}
+        {{/card.actions}}
+      {{/paper-card}}
+
+  </div>
+{{outlet}}
