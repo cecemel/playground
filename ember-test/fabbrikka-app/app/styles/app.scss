@@ -5,6 +5,11 @@
   border-radius: 0 !important;
 }
 
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
 //navbar stuff -> see navbar.hbs
 .navbar-collapse.collapse {
 display: block!important;
@@ -42,11 +47,9 @@ float: right!important;
 }
 
 .thumbnail-hover{
-    -webkit-transition: all .8s ease; /* Safari and Chrome */
-    -moz-transition: all .8s ease; /* Firefox */
-    -o-transition: all .8s ease; /* IE 9 */
-    -ms-transition: all .8s ease; /* Opera */
-    transition: all .8s ease;
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1)
 }
 
 .thumbnail-hover:hover{
