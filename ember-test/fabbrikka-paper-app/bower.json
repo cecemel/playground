@@ -1,5 +1,6 @@
 {
   "name": "fabbrikka-paper-app",
   "dependencies": {
+    "swiper": "~3.4.1"
   }
 }

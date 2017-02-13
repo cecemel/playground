@@ -1,0 +1,14 @@
+{{#paper-card as |card|}}
+	{{card.image src=item.mainImage alt=item.altName }}
+	{{#card.title as |title|}}
+		{{#title.text as |text|}}
+		  {{#text.headline}} {{item.name}} {{/text.headline}}
+    	{{#text.subhead}} {{item.price}} {{/text.subhead}}
+    {{/title.text}}
+    {{#card.actions}}
+      {{#link-to 'garments.details' '123'}}
+        {{#paper-button primary=true}} show me more {{/paper-button}}
+      {{/link-to}}
+      {{/card.actions}}
+  {{/card.title}}
+{{/paper-card}}

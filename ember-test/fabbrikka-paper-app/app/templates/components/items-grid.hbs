@@ -1,0 +1,7 @@
+{{#each rows as |row|}}
+<div class="layout-row layout-xs-column layout-align-center-end">
+    {{#each row as |rowItem|}}
+      {{component itemComponentName item=rowItem}}
+    {{/each}}
+</div>
+{{/each}}

@@ -1,0 +1,19 @@
+<div class="layout-row layout-xs-column layout-sm-column">
+  <div class="flex-66 flex-sm-100 flex-xs-100">  
+  {{#swiper-container pagination=true loop=true slidesPerView=2 spaceBetween=3 centered=true}}
+    {{#each model.images as |image|}}
+      {{#swiper-slide}}<img  class="garment-detail-caroussel" src={{image}}/>{{/swiper-slide}}
+    {{/each}}
+  {{/swiper-container}}
+  </div>
+  <div class="flex" style="padding: 1%">
+
+<h1>{{model.name}}</h1>
+
+  <p>This garment is made with our Copenhagen Deer fabric. A tribute to the Nordic cities and habits. This animal inspires us the elegance and sobriety of a city like Copenhagen, vibrant and cosmopolitan.</p><p>Printed shirt regular fit hand-crafted in ateliers from Barcelona respecting fair trade</p><p>100% poplin cotton certified by Oeko-Tex, label for environmental guarantee</p><p>Erques&nbsp;is&nbsp;1.75m tall and wears an M</p>
+
+ <h2>{{model.price}}</h2>
+ {{#paper-button raised=true accent=true  class="buy-button"}}add to card{{/paper-button}}
+
+  </div>
+</div>
