@@ -23,9 +23,9 @@ def start():
     print('-' * 10 + 'account status' + '-' * 10)
     print('-' * 10 + print_dict(get_current_account_status(client)) + '-' * 10)
 
-    sell_amount = input('how much BTC do you want to sell today?')
+    sell_amount = input('how much BTC do you want to sell today? ')
     sell_price = input('At what price? ($)')
-    buy_price = input('And your buy price in would be? ($)')
+    buy_price = input('And your buy price in would be? ($) ')
 
     print('you want to sell: ' + sell_amount + ' BTC at ' + sell_price)
     print("you'll buy in again at " + buy_price)
@@ -33,9 +33,11 @@ def start():
     short_dict = calculate_short_profit(sell_amount, sell_price, buy_price)
     print_short_profit(short_dict)
     ask_user_confirmation()
+
     print('placing order')
     order = place_sell_order(client, sell_amount, sell_price)
     wait_for_order_to_fullfill(client, order)
+
     print('ok, now placing buy order')
     order = place_buy_order(client, short_dict['total_buy_in'], buy_price)
     wait_for_order_to_fullfill(client, order)
@@ -74,8 +76,8 @@ def wait_for_order_to_fullfill(client, order):
         order_status = client.order_status(order['id'])['status'].lower()
 
         if counter % update_after_iteration == 0:
-            print('current order status is :' + order_status)
-            print('time:' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+            print('current order status is: ' + order_status)
+            print('time: ' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
 
         time.sleep(sleep_time)
 
@@ -100,9 +102,9 @@ def calculate_short_profit(sell_amount, sell_price, buy_price):
 
 def print_short_profit(short_dict):
     print(10 * '#' + 'To resume, we hope: ' + 10 * '#')
-    print('diff between sell and buy: ' + '%.5f' % short_dict['diff_sell_buy'] + '%')
-    print('total sell price: ' + str(short_dict['total_sell']) + '$')
-    print('total amount buy in: ' + str(short_dict['total_buy_in']) + 'BTC')
+    print('diff between sell and buy: ' + '%.5f' % short_dict['diff_sell_buy'] + ' %')
+    print('total sell price: ' + str(short_dict['total_sell']) + ' $')
+    print('total amount buy in: ' + str(short_dict['total_buy_in']) + ' BTC')
 
 
 def ask_user_confirmation():
