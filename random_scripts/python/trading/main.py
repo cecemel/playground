@@ -15,9 +15,6 @@ def start():
     key = getpass.getpass('please provide key: ')
     secret = getpass.getpass('please provide secret: ')
 
-    print(secret)
-    print(key)
-    print(user)
     client = init_trading_client(user.strip(), key.strip(), secret.strip())
 
     print('-' * 10 + 'account status' + '-' * 10)
