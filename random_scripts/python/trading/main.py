@@ -90,7 +90,7 @@ def calculate_short_profit(sell_amount, sell_price, buy_price):
     sell_price = float(sell_price)
     buy_price = float(buy_price)
 
-    diff_sell_buy = (1 - sell_amount/buy_price)*100
+    diff_sell_buy = (1 - buy_price/sell_amount)*100
     total_sell = sell_amount * sell_price - bitstamp_fee * sell_amount * sell_price
     total_buy_in = (total_sell - total_sell * bitstamp_fee)/buy_price
 
