@@ -94,14 +94,14 @@ def calculate_short_profit(sell_amount, sell_price, buy_price):
     total_sell = sell_amount * sell_price - bitstamp_fee * sell_amount * sell_price
     total_buy_in = (total_sell - total_sell * bitstamp_fee)/buy_price
 
-    return {'diff_sell_buy': diff_sell_buy, 'total_sell': total_sell, 'total_buy_in': total_buy_in}
+    return {'diff_sell_buy': diff_sell_buy, 'total_sell': total_sell, 'total_buy_in': round(total_buy_in, 8)}
 
 
 def print_short_profit(short_dict):
     print(10 * '#' + 'To resume, we hope: ' + 10 * '#')
-    print('diff between sell and buy: ' + '%.5f' % short_dict['diff_sell_buy'] + ' %')
+    print('diff between sell and buy: ' + '%.8f' % short_dict['diff_sell_buy'] + ' %')
     print('total sell price: ' + str(short_dict['total_sell']) + ' $')
-    print('total amount buy in: ' + str(short_dict['total_buy_in']) + ' BTC')
+    print('total amount buy in: ' + str(short_dict['total_buy_in']) + ' BTC (8 digits round)')
 
 
 def ask_user_confirmation():
