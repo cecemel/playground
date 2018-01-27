@@ -88,7 +88,7 @@ def wait_for_order_to_fullfill(client, order):
 
 
 def calculate_short_profit(sell_amount, sell_price, buy_price):
-    bitstamp_fee = 0.0026 # note updated it as safety margin and rounding stuff
+    bitstamp_fee = 0.00255 # note updated it as safety margin and rounding stuff
     sell_amount = float(sell_amount)
     sell_price = float(sell_price)
     buy_price = float(buy_price)
