@@ -8,8 +8,8 @@ def serve_food():
     # do it in multi steps duty
     freq = 50
     start_position = 3
-    natural_position = 7.5
-    end_position = 12
+    natural_position = 6
+    end_position = 9
     steps = [start_position, 5, natural_position, 8, end_position]
     wait_time = 10
     everything_ok = False
